@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='' style={{height:"70px", width:"100vw",backgroundColor:"black",color:"white"}}>
+    <div className='' style={{height:"70px", width:"100%",backgroundColor:"black",color:"white"}}>
       <div className='d-flex justify-content-center align-items-center'>
         Copyright 	&#169; Get-Healthy
       </div>
