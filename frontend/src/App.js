@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ServicePage from "./pages/ServicePage";
 import About from "./pages/About";
 import SkinPredictPage from "./pages/SkinPredictPage";
+import InsurancePage from "./pages/InsurancePage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/about" element={<About />} />
 
          <Route path="/services/skin" element={<SkinPredictPage/>} />
+         <Route path="/services/insurance" element={<InsurancePage/>} />
        </Routes>
       </Router>
     </div>
