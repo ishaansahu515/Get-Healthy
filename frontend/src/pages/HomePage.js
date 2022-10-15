@@ -1,13 +1,15 @@
 import React from 'react'
+import Footer from '../components/Footer'
 import HeaderCard from '../components/HeaderCard'
 import Navbar from '../components/Navbar'
-import Footers from '../components/Footers/footers'
+import About from './About'
+
 const HomePage = () => {
   return (
     <>
     <Navbar/>
     <HeaderCard/>
-    <Footers/>
+    <Footer/>
     </>
   )
 }
