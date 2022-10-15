@@ -1,5 +1,5 @@
 import React from 'react'
-import image from '../../images/image1.jpg'
+import image from '../images/image1.jpg'
 
 const header=[
     'Disease Prediction',
