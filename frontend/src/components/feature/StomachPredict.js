@@ -3,36 +3,52 @@ import axios from 'axios'
 
 const formContainer = {
   margin: "auto",
-  width: "50vw",
+  width: "60vw",
 }
 
+
+
 const symptoms = [
-  'Itching',
-  'Skin Rash',
-  'Nodal Skin',
-  'Joint Pain',
-  'Dischrommic Path',
-  'Pus filled Pimple',
-  'Scurring',
-  'Skin peeling',
-  'Silver like Dusting',
-  'Small Dents',
-  "Inflammatory"
+ 'Itching',
+  'Stomach Pain',
+  'Acidity',
+  'Ulcers on Tongue',
+  'Vomiting',
+  'Cough',
+  'Sunken Eyes',
+  'Dehydration',
+  'Indigestion',
+  'Yellow Skin',
+  'Nausea',
+  'Loss of Appetite',
+  'Abdominal Pain',
+  'Diarrhoea',
+  'Yellowing of Eyes',
+  'Chest Pain',
+  'Passage of Gases',
+  'Internal Itching'
 ]
 
-const SkinPredict = () => {
+const StomachPredict = () => {
   const [val, setVal] = useState({
     itching: -1,
-    skinrash: -1,
-    nodalskin: -1,
-    jointpain: -1,
-    dischrommicpath: -1,
-    pusfilledPimple: -1,
-    scurring: -1,
-    skinpeeling: -1,
-    silverlikedusting: -1,
-    smalldents: -1,
-    inflammatory: -1,
+    stomachpain: -1,
+    acidity: -1,
+    ulcersontongue: -1,
+    vomiting: -1,
+    cough: -1,
+    sunkeneyes: -1,
+    dehydration: -1,
+    indigestion: -1,
+    yellowishskin: -1,
+    nausea: -1,
+    lossofappetite: -1,
+    abdominalpain: -1,
+    diarrhoea: -1,
+    yellowingofeyes: -1,
+    chestpain: -1,
+    passageofgases: -1,
+    internalitching: -1,
   })
 
   const [result, setResult] = useState("")
@@ -61,13 +77,13 @@ const SkinPredict = () => {
       feat.push(val[item])
     }
     setResult("Getting Result")
-    const { data } = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/skin`, {feat});
+    const { data } = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/stomach`, {feat});
     setResult(data.answer);
   } 
 
   return (
     <div>
-      <h1 className="text-center">Skin Issue Prediction</h1>
+      <h1 className="text-center">Stomach Issue Prediction</h1>
         <form onSubmit={handleSubmit}  style={formContainer}>
       <div className="row">
           {Object.keys(val).map((item,i) => (
@@ -97,4 +113,4 @@ const SkinPredict = () => {
   )
 }
 
-export default SkinPredict
+export default StomachPredict

@@ -3,36 +3,60 @@ import axios from 'axios'
 
 const formContainer = {
   margin: "auto",
-  width: "50vw",
+  width: "58vw",
 }
 
 const symptoms = [
   'Itching',
-  'Skin Rash',
-  'Nodal Skin',
   'Joint Pain',
-  'Dischrommic Path',
-  'Pus filled Pimple',
-  'Scurring',
-  'Skin peeling',
-  'Silver like Dusting',
-  'Small Dents',
-  "Inflammatory"
+  'Vomiting',
+  'Fatigue',
+  'Lethargy',
+  'High Fever',
+  'Yellowish Skin',
+  'Dark Urine',
+  'Nausea',
+  'Loss of Apetite',
+  "Abdominal Pain",
+  "Diarrhoea",
+  "Mild Fever",
+  "Yellow Urine",
+  "Yellowing of Eyes",
+  "Acute Liver Faliure",
+  "Malaise",
+  "Muscle Pain",
+  "Family History",
+  "Receiving Blood Transfusion",
+  "Receiving Unsterile Injections",
+  "Coma",
+  "Stomach Bleeding"
 ]
 
-const SkinPredict = () => {
+const HepatitisPredict = () => {
   const [val, setVal] = useState({
     itching: -1,
-    skinrash: -1,
-    nodalskin: -1,
     jointpain: -1,
-    dischrommicpath: -1,
-    pusfilledPimple: -1,
-    scurring: -1,
-    skinpeeling: -1,
-    silverlikedusting: -1,
-    smalldents: -1,
-    inflammatory: -1,
+    vomiting: -1,
+    fatigue: -1,
+    lethargy: -1,
+    highfever: -1,
+    yellowishskin: -1,
+    darkurine: -1,
+    nausea: -1,
+    lossofappetite: -1,
+    abdominalpain: -1,
+    diarrhoea: -1,
+    mildfever: -1,
+    yellowurine: -1,
+    yellowingofeyes: -1,
+    acuteliverfailure: -1,
+    malaise: -1,
+    musclepain: -1,
+    familyhistory: -1,
+    recievingbloodtransfusion: -1,
+    recievingunsterileinjections: -1,
+    coma: -1,
+    stomachbleeding: -1,
   })
 
   const [result, setResult] = useState("")
@@ -44,6 +68,7 @@ const SkinPredict = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    
     let ctr = 0;
     for (const item in val) {
       if (val[item] === -1) {
@@ -56,18 +81,19 @@ const SkinPredict = () => {
       alert("no disease!");
       return;
     }
+    
     let feat = []
     for (const item in val){
       feat.push(val[item])
     }
-    setResult("Getting Result")
-    const { data } = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/skin`, {feat});
+    setResult("Getting Result");
+    const { data } = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/hepatitis`, {feat});
     setResult(data.answer);
   } 
 
   return (
     <div>
-      <h1 className="text-center">Skin Issue Prediction</h1>
+      <h1 className="text-center">Hepatitis Prediction</h1>
         <form onSubmit={handleSubmit}  style={formContainer}>
       <div className="row">
           {Object.keys(val).map((item,i) => (
@@ -97,4 +123,4 @@ const SkinPredict = () => {
   )
 }
 
-export default SkinPredict
+export default HepatitisPredict
