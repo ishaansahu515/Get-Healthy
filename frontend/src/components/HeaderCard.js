@@ -10,9 +10,9 @@ const cardStyle={
 
 const HeaderCard = () => {
   return (
-    <div style={{height:"90vh",width:"99vw",}}>
-      <div className="row" style={{background:`#ffffff url(${image}) no-repeat`,backgroundSize:"cover"}}>
-  <div className="col-sm-6 ms-5" >
+    <div>
+      <div className="row m-0" style={{height:"100vh",width:"100vw",background:`#ffffff url(${image}) no-repeat`,backgroundSize:"cover"}}>
+  <div className="col-sm-6  ms-5 " >
     <div className="card border-0" style={cardStyle}>
       <div className="card-body">
         <h1 className="card-title ">Wellness Builds Upon the Medical</h1>
