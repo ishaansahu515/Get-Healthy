@@ -3,9 +3,7 @@ import axios from 'axios'
 
 const formContainer = {
   margin: "auto",
-  height: "80vh",
   width: "50vw",
-  border:"2px solid red"
 }
 
 const symptoms = [
@@ -41,7 +39,7 @@ const SkinPredict = () => {
 
   const handleChange = (e) =>
   {
-    setVal({...val,[e.target.name]:e.target.value})
+    setVal((val)=>({...val,[e.target.name]:e.target.value}))
   }
 
   const handleSubmit = async (e) => {
@@ -55,19 +53,23 @@ const SkinPredict = () => {
       }
       ctr = ctr + Number(val[item]);
     }
-    console.log("ctr", ctr);
+    console.log("ctr", val);
     if (ctr < 2) {
       alert("no disease!");
       return;
     }
-
-    const { data } = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/predict/skin`, val);
+    console.log(process.env.REACT_APP_BACKEND_URL)
+    let obj = {feat:[]}
+    for (const item in val){
+      obj.feat.push(val[item])
+    }
+    const { data } = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/skin`, obj);
     setResult(data.answer);
     console.log(data.answer);
   } 
 
   return (
-    <>
+    <div>
       <h1 className="text-center">Skin Issue Prediction</h1>
         <form onSubmit={handleSubmit}  style={formContainer}>
       <div className="d-flex flex-wrap justify-content-around">
@@ -91,8 +93,10 @@ const SkinPredict = () => {
           </button>
       </div>
         </form>
-        <h3>{result}</h3>
-    </>
+        <div className="d-flex justify-content-center align-items-center">
+          <h3>Result: {result}</h3>
+        </div>
+    </div>
   )
 }
 
