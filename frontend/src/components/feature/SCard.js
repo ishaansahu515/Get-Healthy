@@ -14,7 +14,8 @@ const text = [
 ]
 
 const SCard = () => {
-    return (
+    return (<>
+    <h1 className='d-flex justify-content-center align-items-center mt-1'>OUR SERVICES</h1>
         <div className='container '>
             <div className='row mt-3 '>
                 {text.map((temp,i) => (
@@ -28,6 +29,7 @@ const SCard = () => {
                 ))}
             </div>
         </div>
+        </>
     )
 }
 

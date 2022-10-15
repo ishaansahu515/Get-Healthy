@@ -6,8 +6,6 @@ const ServicePage = () => {
   return (
     <>
       <Navbar/>
-      <h1>OUR SERVICES</h1>
-      <SCard/>
     </>
   )
 }
