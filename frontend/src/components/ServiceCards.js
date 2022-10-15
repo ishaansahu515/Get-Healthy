@@ -13,7 +13,7 @@ const text = [
     'Publish health realted blogs My-Health he',
 ]
 
-const SCard = () => {
+const ServiceCards = () => {
     return (<>
     <h1 className='d-flex justify-content-center align-items-center mt-1'>OUR SERVICES</h1>
         <div className='container '>
@@ -33,4 +33,4 @@ const SCard = () => {
     )
 }
 
-export default SCard;
+export default ServiceCards;
