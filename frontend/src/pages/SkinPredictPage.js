@@ -1,5 +1,6 @@
 import React from 'react'
 import SkinPredict from '../components/feature/SkinPredict'
+import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 
 const SkinPredictPage = () => {
@@ -7,6 +8,7 @@ const SkinPredictPage = () => {
     <>
     <Navbar/>
     <SkinPredict/>
+    <Footer/>
     </>
   )
 }
