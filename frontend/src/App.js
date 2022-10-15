@@ -2,6 +2,7 @@ import HomePage from "./pages/HomePage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ServicePage from "./pages/ServicePage";
 import About from "./pages/About";
+import SkinPredictPage from "./pages/SkinPredictPage";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
           <Route path="/services" element={<ServicePage />} />
           <Route path="/about" element={<About />} />
 
-        </Routes>
+         <Route path="/services/skin" element={<SkinPredictPage/>} />
+       </Routes>
       </Router>
     </div>
   );
