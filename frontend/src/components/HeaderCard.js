@@ -11,7 +11,7 @@ const cardStyle={
 const HeaderCard = () => {
   return (
     <>
-      <div className="row m-0" style={{background:`#ffffff url(${image}) no-repeat`,backgroundSize:"cover"}}>
+      <div className="row m-0" style={{background:`#ffffff url(${image}) no-repeat`,backgroundSize:"100%"}}>
   <div className="col-sm-6 ms-5" >
     <div className="card border-0" style={cardStyle}>
       <div className="card-body">

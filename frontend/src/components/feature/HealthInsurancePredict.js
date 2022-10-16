@@ -2,9 +2,8 @@ import { useState } from "react"
 import axios from 'axios'
 
 const formContainer = {
-    margin: "20px auto",
-    maxWidth: "50vw",
-
+    margin: "0 37vw",
+    width:"50vw"
 }
 const HealthInsurancePredict = () => {
 
@@ -37,8 +36,8 @@ const HealthInsurancePredict = () => {
         <>
             <h1 className="text-center">Health Insurance</h1>
             <form onSubmit={handleSubmit} style={formContainer}>
-                <div className="form-row">
-                    <div className="form-group col-md-6 my-2">
+               
+                    <div className=" form-group w-50 my-2">
                         <label htmlFor="inputAge">Age</label>
                         <input
                             type="number"
@@ -49,7 +48,7 @@ const HealthInsurancePredict = () => {
                             onChange={handleChange}
                         />
                     </div>
-                    <div className="form-group col-md-6 my-2">
+                    <div className="form-group w-50  my-2">
                         <label htmlFor="inputSex4">Sex</label>
                         <select
                 id="inputState"
@@ -63,7 +62,7 @@ const HealthInsurancePredict = () => {
                 <option value="female">FEMALE</option>
               </select>
                     </div>
-                </div>
+                
                 <div className="form-group my-2 w-50">
                     <label htmlFor="inputAddress2">BMI</label>
                     <input
@@ -92,7 +91,7 @@ const HealthInsurancePredict = () => {
 
                 <div className="my-2">
                     <label htmlFor="inputCity">Smoker</label>
-                    <div className="custom-select w-100 p-2">
+                    <div className="custom-select w-100">
                         <select className="custom-select w-50 p-2">
                             <option selected>Select</option>
                             <option value="yes">YES</option>
