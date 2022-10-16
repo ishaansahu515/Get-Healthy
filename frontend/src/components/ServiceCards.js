@@ -5,12 +5,12 @@ const header=[
     'Disease Prediction',
     'Insurance Amount',
     'Health Realted Blog',
-
 ]
+
 const text = [
     'Predict diseases related to specific features.',
     'Predict medical insurance amount.',
-    'Publish health realted blogs My-Health he',
+    'Publish health realted blogs',
 ]
 
 const ServiceCards = () => {

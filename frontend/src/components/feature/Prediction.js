@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import image from "../../images/detect.jpg"
-import Footer from "../Footer"
 
 const predictions = [
   {
@@ -18,7 +17,7 @@ const predictions = [
   },
   {
     name:"Health Insurance",
-    url:"/healthinsurance"
+    url:"/insurance"
   },
   
 ]
@@ -43,7 +42,6 @@ const Prediction = () => {
           </div>
         ))}
       </div>
-      <Footer />
     </>
   )
 }

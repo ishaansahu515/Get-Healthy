@@ -1,5 +1,6 @@
 import React from 'react'
 import Prediction from '../components/feature/Prediction'
+import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 
 const ServicePage = () => {
@@ -7,6 +8,7 @@ const ServicePage = () => {
     <>
       <Navbar/>
       <Prediction />
+      <Footer/>
     </>
   )
 }
